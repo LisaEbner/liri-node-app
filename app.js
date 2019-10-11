@@ -63,7 +63,7 @@ function OMDB() {
   function Bands() {
     inquirer
     .prompt({
-      message: "Whose concert are you looking for?",
+      message: "Who'se concert are you looking for?",
       type: "input",
       name: "artist"
     }).then(res=>{
@@ -78,7 +78,7 @@ function OMDB() {
 
   function getSpotify(){
     inquirer.prompt({
-      message: "Select a year to hear what was playing on the radio",
+      message: "Select a band or year you wish to hear.",
       name: "artist",
       type: "input"
     }).then(res=>{
