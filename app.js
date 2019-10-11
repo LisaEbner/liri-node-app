@@ -35,14 +35,13 @@ inquirer
 function OMDB() {
   inquirer
     .prompt({
-      message: "What year would you like to travel to?",
+      message: "Select a year to generate a film from hat time period.",
       type: "input",
       name: "year"
     })
     .then(answer => {
       randArr = ["any", "the", "i", "me"];
       randTerm = randArr[Math.floor(Math.random() * randArr.length)];
-      console.log("your random search term is ", randTerm);
       request(
         `http://www.omdbapi.com/?t=${randTerm}&y=${answer.year}&plot=short&apikey=trilogy`,
         function(error, response, body) {
